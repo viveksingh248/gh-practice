@@ -1,0 +1,12 @@
+name: Triggers on push
+on:
+    push:
+        branches:
+            - main
+jobs:
+    runs-on: ubuntu-latest
+    steps:
+        - name: Install node package manager
+          run: npm install
+        - name: Test the code
+          run: npm test
