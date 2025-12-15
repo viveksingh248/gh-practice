@@ -1,13 +1,12 @@
 name: A pull request workflow
 on:
     pull_request:
-        types:
-            - closed
-        branches:
-            - main
+
 jobs:
     state_event_type:
         runs-on: ubuntu-latest
         steps:
+            - name: Checkout code
+              uses: actions/checkout@v3
             - name: Running a simple script.
-              run: echo "Running PR Checks & checking if its working"
+              run: echo "Running PR Checks & checking if it's working"
