@@ -10,4 +10,4 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Running a simple script.
-              run: echo "Running PR Checks"
+              run: echo "Running PR Checks & checking if its working"
