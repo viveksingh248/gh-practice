@@ -1,13 +1,21 @@
 name: Triggers on push
+
 on:
     push:
         branches:
             - main
+
 jobs:
-    deploy:
+    build-and-test:
         runs-on: ubuntu-latest
         steps:
-            - name: Install node package manager
+            - name: Checkout code
+              uses: actions/checkout@v3
+            - name: Setup Node
+              uses: actions/setup-node@v3
+              with:
+                  node-version: "18"
+            - name: Install node packages
               run: npm install
             - name: Test the code
               run: npm test
