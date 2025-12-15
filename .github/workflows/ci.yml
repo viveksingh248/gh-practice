@@ -4,9 +4,10 @@ on:
         branches:
             - main
 jobs:
-    runs-on: ubuntu-latest
-    steps:
-        - name: Install node package manager
-          run: npm install
-        - name: Test the code
-          run: npm test
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Install node package manager
+              run: npm install
+            - name: Test the code
+              run: npm test
